@@ -16,9 +16,10 @@ public class SpeedAdjuster {
     @Scheduled(fixedDelay = 1000L)
     public void adjust() {
         long adjustment = state.getAdjustment();
-        post(adjustment);
+        //post(adjustment);
         System.out.println("Now running : " + state.getRunningNow());
-        System.out.println("Slow down by: " + adjustment + "ms");
+        if (adjustment != 0)
+            System.out.println("Slow down by: " + adjustment + "ms");
     }
 
     private void post(long ms){

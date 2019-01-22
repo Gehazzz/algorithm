@@ -13,7 +13,7 @@ public class AlgorithmServiceImpl implements AlgorithmService{
     @Override
     @SneakyThrows
     public void run(Photo photo) {
-        Thread.sleep(60000L);
+        Thread.sleep(6000000L);
         Optional<String> optional = Optional.ofNullable(photo.getPhoto());
         //optional.ifPresent(System.out::println);
     }
